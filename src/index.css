@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom background for all sections except Home */
+.section-dark {
+  background-color: #0d0d0d; /* near-black */
+  color: white;
+}
+
+.custom-input {
+  background-color: #111111; /* near black */
+  border: 1px solid #333333; /* subtle gray border */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
