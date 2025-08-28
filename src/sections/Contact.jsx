@@ -1,10 +1,6 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { useState } from "react";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
   return (
     <section id="contact" className="section-dark py-32 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 md:grid md:grid-cols-2 gap-12">
@@ -61,67 +57,56 @@ export default function Contact() {
         </div>
 
         {/* Right Side (Form) */}
-        {!submitted ? (
-          <form
-            action="https://formspree.io/f/xzzaznnv" 
-            method="POST"
-            onSubmit={(e) => {
-              setLoading(true);
-            }}
-            className="space-y-6"
-          >
-            <div>
-              <label className="block text-sm font-medium">Name</label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Email</label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Subject</label>
-              <input
-                type="text"
-                name="subject"
-                className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Message</label>
-              <textarea
-                name="message"
-                rows="4"
-                required
-                className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-lime-300 text-black px-8 py-3 rounded-full font-semibold hover:bg-lime-200 transition"
-            >
-              {loading ? "Submitting..." : "Submit"}
-            </button>
-          </form>
-        ) : (
-          <div className="flex flex-col items-center justify-center text-center p-10 bg-[#1a1a1a] rounded-xl">
-            <h3 className="text-2xl font-bold text-lime-300 mb-4">
-              🎉 Thank you!
-            </h3>
-            <p className="text-gray-400">
-              Your message has been successfully submitted. I’ll get back to you soon.
-            </p>
+        <form
+          action="https://formspree.io/f/xzzaznnv"
+          method="POST"
+          className="space-y-6"
+        >
+          {/* Redirect to custom thankyou page */}
+          <input type="hidden" name="_redirect" value="/thankyou.html" />
+
+          <div>
+            <label className="block text-sm font-medium">Name</label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
+            />
           </div>
-        )}
+          <div>
+            <label className="block text-sm font-medium">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Message</label>
+            <textarea
+              name="message"
+              rows="4"
+              required
+              className="w-full bg-[#1a1a1a] text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-300"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="bg-lime-300 text-black px-8 py-3 rounded-full font-semibold hover:bg-lime-200 transition"
+          >
+            Submit
+          </button>
+        </form>
       </div>
     </section>
   );
