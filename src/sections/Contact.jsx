@@ -67,7 +67,16 @@ export default function Contact() {
             data-netlify="true"
             onSubmit={(e) => {
               e.preventDefault();
-              setSubmitted(true);
+              const form = e.target;
+              const formData = new FormData(form);
+
+              fetch("/", {
+                method: "POST",
+                body: new URLSearchParams(formData).toString(),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              })
+                .then(() => setSubmitted(true))
+                .catch((error) => alert(error));
             }}
             className="space-y-6"
           >
