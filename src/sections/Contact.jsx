@@ -58,13 +58,10 @@ export default function Contact() {
 
         {/* Right Side (Form) */}
         <form
-          action="https://formspree.io/f/xzzaznnv"
+          action="https://formspree.io/f/xzzaznnv?redirect=https://swarupdas-portfolio.netlify.app/thankyou.html"
           method="POST"
           className="space-y-6"
         >
-          {/* Redirect to custom thankyou page */}
-          <input type="hidden" name="_redirect" value="/thankyou.html" />
-
           <div>
             <label className="block text-sm font-medium">Name</label>
             <input
