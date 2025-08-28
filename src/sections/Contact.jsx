@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <section id="contact" className="section-dark py-32 border-t border-gray-800">
@@ -62,27 +63,13 @@ export default function Contact() {
         {/* Right Side (Form) */}
         {!submitted ? (
           <form
-            name="contact"
+            action="https://formspree.io/f/xzzaznnv" 
             method="POST"
-            data-netlify="true"
             onSubmit={(e) => {
-              e.preventDefault();
-              const form = e.target;
-              const formData = new FormData(form);
-
-              fetch("/", {
-                method: "POST",
-                body: new URLSearchParams(formData).toString(),
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              })
-                .then(() => setSubmitted(true))
-                .catch((error) => alert(error));
+              setLoading(true);
             }}
             className="space-y-6"
           >
-            {/* Required hidden input for Netlify */}
-            <input type="hidden" name="form-name" value="contact" />
-
             <div>
               <label className="block text-sm font-medium">Name</label>
               <input
@@ -122,7 +109,7 @@ export default function Contact() {
               type="submit"
               className="bg-lime-300 text-black px-8 py-3 rounded-full font-semibold hover:bg-lime-200 transition"
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
         ) : (
