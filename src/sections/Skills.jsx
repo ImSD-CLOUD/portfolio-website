@@ -5,7 +5,9 @@ import {
   DevicePhoneMobileIcon, 
   ShieldCheckIcon, 
   CpuChipIcon, 
-  PresentationChartBarIcon 
+  PresentationChartBarIcon,
+  CubeIcon,
+  CommandLineIcon 
 } from "@heroicons/react/24/outline";
 
 export default function Skills() {
@@ -17,6 +19,8 @@ export default function Skills() {
     { name: "Azure AD", icon: ShieldCheckIcon },
     { name: "SCCM", icon: CpuChipIcon },
     { name: "Power BI", icon: ChartBarIcon },
+    { name: "Docker", icon: CubeIcon },
+    { name: "Terraform", icon: CommandLineIcon },
   ];
 
   return (
