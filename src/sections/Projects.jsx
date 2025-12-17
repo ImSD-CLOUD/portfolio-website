@@ -17,6 +17,13 @@ export default function Projects() {
       link: "https://www.novypro.com/project/maven-parental-leave-report-power-bi",
       image: "/projects/maven.PNG",
     },
+    {
+      title: "AI-Powered Audio Separation App",
+      description:
+        "A production-ready serverless application using AWS SageMaker to separate vocals and instrumentals from audio tracks via Demucs deep learning model. Architected end-to-end ML pipeline with Docker containerization, asynchronous GPU inference (ml.g4dn.xlarge), and cost-optimized auto-scaling. Built full-stack solution with React frontend and Node.js Lambda functions, integrated via HTTP API Gateway with security best practices (CORS, rate limiting, IAM authentication).",
+      link: "https://demucs-audio-separator-app.netlify.app",
+      image: "/projects/audio-separator.PNG",
+    },
   ];
 
   return (
