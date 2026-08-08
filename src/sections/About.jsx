@@ -13,8 +13,7 @@ export default function About() {
         {/* Right side content */}
         <div>
           <p className="text-2xl font-bold tracking-wide mb-6 font-[Nunito] leading-snug">
-            Experienced Windows Administrator with 3 years of hands-on expertise
-            in managing and supporting Windows Server environments.
+            Associate IT Consultant with over 3 years of hands-on expertise in managing and supporting Windows Server environments.
           </p>
           <p className="text-gray-400 mb-6 font-[Inter] leading-relaxed">
             Proficient in VMware ESXi for virtualization, Active Directory for

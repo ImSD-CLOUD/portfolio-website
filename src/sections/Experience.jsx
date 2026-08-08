@@ -1,8 +1,21 @@
 export default function Experience() {
   const experiences = [
     {
-      role: "Windows Administrator",
-      company: "Wipro (Abbott Laboratories Project)",
+      role: "Associate IT Consultant",
+      company: "ITC Infotech",
+      period: "Dec 2025 — Present",
+      details: [
+        "Managed Microsoft Entra ID (Azure AD) for user provisioning, group management, RBAC, PIM, Conditional Access, MFA, SSO, and OAuth-based application integration.",
+        "Performed Active Directory health checks by monitoring AD replication, DNS, SYSVOL/DFSR, FSMO roles, and domain controller health.",
+        "Worked on tenant-to-tenant SharePoint Online migration using ShareGate and PnP PowerShell.",
+        "Administered Windows Server and Active Directory environments, including OU management, GPO implementation, and NTFS/shared folder permissions.",
+        "Developed and executed PowerShell scripts to automate Microsoft 365 and Active Directory administrative tasks such as bulk provisioning, mailbox management, and reporting.",
+        "Administration of Microsoft 365 services including Exchange Online, SharePoint Online, OneDrive for Business, Teams, and basic Microsoft Defender administration.",
+      ],
+    },
+    {
+      role: "Windows Server Administrator",
+      company: "Wipro Limited",
       period: "Nov 2021 — Jan 2025",
       details: [
         "Configuration and management of VMware ESXi hosts and vCenter Server.",

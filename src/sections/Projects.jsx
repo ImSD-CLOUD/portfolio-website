@@ -7,14 +7,14 @@ export default function Projects() {
       title: "Telangana Tourist Report",
       description:
         "Telangana Tourist Report is a data visualization project which has been done using Power BI. It is based on the insights driven from the data of 4 years of total domestic and foreign visitors at each district of Telangana and also how govt can improve the revenue growth for the upcoming years.",
-      link: "https://www.novypro.com/project/telangana-tourist-report-power-bi",
+      link: "https://app.powerbi.com/view?r=eyJrIjoiMTMzNTdiZTgtZWQxZC00Y2JiLWIzZDUtZTNiYTA2NmVjZDA0IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
       image: "/projects/telangana.PNG",
     },
     {
       title: "Maven Parental Leave Report",
       description:
         "Maven Parental Leave Report is a data visualization project which has been done using Power BI based on the raw data provided by Maven Analytics. It's about overall paternity leave and maternity leave provided by 1600 companies across 186 different industries and key insights that could help to improve the overall leave factor.",
-      link: "https://www.novypro.com/project/maven-parental-leave-report-power-bi",
+      link: "https://app.powerbi.com/view?r=eyJrIjoiNzU0NWRjNzktZDJhZi00OTFiLTg5NzItNDVlMWU3MDIwMGNlIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9",
       image: "/projects/maven.PNG",
     },
     {
@@ -22,7 +22,7 @@ export default function Projects() {
       description:
         "A production-ready serverless application using AWS SageMaker to separate vocals and instrumentals from audio tracks via Demucs deep learning model. Architected end-to-end ML pipeline with Docker containerization, asynchronous GPU inference (ml.g4dn.xlarge), and cost-optimized auto-scaling. Built full-stack solution with React frontend and Node.js Lambda functions, integrated via HTTP API Gateway with security best practices (CORS, rate limiting, IAM authentication).",
       link: "https://demucs-audio-separator-app.netlify.app",
-      image: "/projects/audio-separator.PNG",
+      image: "/projects/audio-separator.png",
     },
   ];
 
